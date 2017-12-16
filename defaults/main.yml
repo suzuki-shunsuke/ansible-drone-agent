@@ -1,0 +1,7 @@
+---
+# defaults file for drone-agent
+drone_agent_docker_network_name: drone
+drone_agent_docker_image_name: drone/agent
+drone_agent_docker_image_tag: latest
+drone_agent_env: {}
+drone_agent_container_name: drone-agent

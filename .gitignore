@@ -1,0 +1,15 @@
+# Vagrant
+.vagrant
+
+# Ansible
+*.retry
+tests/_roles/*
+
+# Node.js
+node_modules
+
+# common
+**/*.log
+
+# Mac
+.DS_Store

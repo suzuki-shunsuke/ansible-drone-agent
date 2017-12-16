@@ -1,0 +1,16 @@
+---
+- hosts: all
+  vars:
+    nonroot: "{{ (ansible_env.USER is undefined) | ternary(ansible_env.HOME != '/root', ansible_env.USER != 'root') }}"
+  roles:
+    - role: suzuki-shunsuke.docker-ce-centos
+      docker_centos_state: started
+      docker_centos_enabled: yes
+      become: "{{nonroot}}"
+    - role: suzuki-shunsuke.docker-py-centos
+      become: "{{nonroot}}"
+    - role: ansible-drone-agent
+      drone_agent_env:
+        DRONE_SERVER: "drone.example.com:9000"
+        DRONE_SECRET: "drone-secret"
+      become: "{{nonroot}}"
