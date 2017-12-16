@@ -1,0 +1,16 @@
+- name: create a docker network
+  docker_network:
+    name: "{{drone_agent_docker_network_name}}"
+- name: pull drone-agent docker image
+  docker_image:
+    name: "{{drone_agent_docker_image_name}}"
+    tag: "{{drone_agent_docker_image_tag}}"
+- name: create drone-agent container
+  docker_container:
+    name: "{{drone_agent_container_name}}"
+    image: "{{drone_agent_docker_image_name}}:{{drone_agent_docker_image_tag}}"
+    networks:
+      - name: "{{drone_agent_docker_network_name}}"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    env: "{{drone_agent_env}}"
