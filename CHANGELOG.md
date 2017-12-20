@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.1.0"></a>
+# [1.1.0](https://github.com/suzuki-shunsuke/ansible-drone-agent/compare/v1.0.1...v1.1.0) (2017-12-20)
+
+
+### Features
+
+* add-network-mode ([3783adb](https://github.com/suzuki-shunsuke/ansible-drone-agent/commit/3783adb))
+
+
+
 <a name="1.0.1"></a>
 ## [1.0.1](https://github.com/suzuki-shunsuke/ansible-drone-agent/compare/v1.0.0...v1.0.1) (2017-12-16)
 
