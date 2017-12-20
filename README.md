@@ -18,6 +18,7 @@ drone_agent_docker_network_name | no | drone
 drone_agent_docker_image_name | no | drone/agent
 drone_agent_docker_image_tag | no | latest
 drone_agent_container_name | no | drone-agent
+drone_agent_network_mode | no | null
 
 About `drone_agent_env`, see the following links.
 
